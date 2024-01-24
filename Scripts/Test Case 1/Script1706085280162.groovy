@@ -17,7 +17,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Mobile.startApplication('C:\\Users\\HeshamAbdElhamedGhar\\Downloads\\General-Store.apk', true)
+String appFile = GlobalVariable.G_AppPath
+Mobile.startApplication(appFile, true)
 
 Mobile.tap(findTestObject('Object Repository/android.widget.Spinner'), 0)
 
