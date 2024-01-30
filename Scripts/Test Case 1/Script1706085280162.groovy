@@ -18,25 +18,41 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 String appFile = GlobalVariable.G_AppPath
+
 Mobile.startApplication(appFile, true)
 
+Mobile.waitForElementPresent(findTestObject('Object Repository/android.widget.Spinner'), 0)
+
 Mobile.tap(findTestObject('Object Repository/android.widget.Spinner'), 0)
+/////////////////////////////////////
+Mobile.waitForElementPresent(findTestObject('Object Repository/android.widget.TextView - Andorra'), 0)
 
 Mobile.tap(findTestObject('Object Repository/android.widget.TextView - Andorra'), 0)
+//////////////////////////////////////////////////////////////////////
+Mobile.waitForElementPresent(findTestObject('Object Repository/android.widget.EditText - Enter name here'), 0)
 
 Mobile.setText(findTestObject('Object Repository/android.widget.EditText - Enter name here'), 'Hesham Abd Elhamed', 0)
 
 Mobile.hideKeyboard()
+////////////////////////////////////////////////////////////////////
+Mobile.waitForElementPresent(findTestObject('Object Repository/android.widget.RadioButton - Male'), 0)
+
 
 Mobile.tap(findTestObject('Object Repository/android.widget.RadioButton - Male'), 0)
 
 Mobile.tap(findTestObject('Object Repository/android.widget.Button - Lets  Shop'), 0)
+///////////////////////////////////////////
+Mobile.waitForElementPresent(findTestObject('Object Repository/android.widget.TextView - ADD TO CART'), 0)
+
 
 Mobile.tap(findTestObject('Object Repository/android.widget.TextView - ADD TO CART'), 0)
 
 Mobile.tap(findTestObject('Object Repository/android.widget.TextView - ADD TO CART (1)'), 0)
+///////////////////////////////////////////////////////////////////
 
 Mobile.tap(findTestObject('Object Repository/android.widget.ImageButton'), 0)
+//////////////////////////////////////////////////////
+Mobile.waitForElementPresent(findTestObject('Object Repository/android.widget.TextView - Air Jordan 4 Retro'), 0)
 
 Mobile.verifyElementExist(findTestObject('Object Repository/android.widget.TextView - Air Jordan 4 Retro'), 0)
 
